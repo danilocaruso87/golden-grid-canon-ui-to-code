@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSS Grid example">
+    <meta name="keywords" content="HTML,CSS,CSSGrid,Layout">
+    <meta name="author" content="danilo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, , user-scalable=no">
+    <title>testo cambiato</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: testo cambiato;
+            --web-view-id: GoldenCanonGridExample01;
+            --web-scale-on-resize: true;
+            --web-enable-deep-linking: true;
+        }
+        
+         :root {
+            --web-view-ids: GoldenCanonGridExample01;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+        
+        html {
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: "Raleway", sans-serif;
+            background-color: #f3c8c8;
+        }
+        
+        #GoldenCanonGridExample01 {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.5% 1.9% 1.6% 3.4% 4% 4.3% 3.4% 3.3% 1.5% 1.6% 9% 6% 7% 1.5% 1.5% 15% 7% 1.5% 1.5% 8.3% 1.5% 12.2%;
+            grid-template-rows: 2% 8.8% 9.1% 7.5% 5.8% 3.7% 10.3% 2.8% 2.8% 14% 13% 12% 2.6% 2.4% 1% 2%;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 50rem;
+            min-width: 349px;
+            overflow: hidden;
+            --web-view-name: GoldenCanonGrid/Example01;
+            --web-view-id: GoldenCanonGridExample01;
+            --web-scale-on-resize: true;
+            --web-enable-deep-linking: true;
+            grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . ." ". menu menu menu menu menu menu menu menu . cerca cerca cerca cerca cerca cerca cerca . login login login login .  " ".  h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . . . . .  " ".  h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . ." "s1 s1 s1 s1 s1 s1 s1 s1 s1 s2 s2 s2 s2 s2 s2 s2 s2 s2 s3 s3 s3 s3 s3" "s1 s1 s1 s1 s1 s1 s1 s1 s1 s2 s2 s2 s2 s2 s2 s2 s2 s2 s3 s3 s3 s3 s3" "s1 s1 s1 s1 s1 s1 s1 s1 s1 s2 s2 s2 s2 s2 s2 s2 s2 s2 s3 s3 s3 s3 s3";
+        }
+        
+        .vert__line1 {
+            grid-column: 9/10;
+            grid-row: 1/24;
+            border-right: 1px solid #665454;
+            z-index: 0;
+        }
+        
+        .vert__line2 {
+            grid-column: 18/19;
+            grid-row: 1/24;
+            border-right: 1px solid #665454;
+            z-index: 0;
+        }
+        
+        .oriz__line1 {
+            grid-column: 1/24;
+            grid-row: 8/9;
+            border-bottom: 1px solid #665454;
+            z-index: 0;
+        }
+        
+        .menu {
+            grid-area: menu;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .cerca {
+            grid-area: cerca;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .login {
+            grid-area: login;
+            display: flex;
+            justify-content: end;
+        }
+        
+        .login,
+        .cerca,
+        .menu,
+        .text__s4,
+        {
+            font-size: 0.8rem;
+        }
+        
+        .lente,
+        .lent_before {
+            font-size: 1.3rem;
+        }
+        
+        .s1 {
+            grid-area: s1;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .s2 {
+            grid-area: s2;
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .s3 {
+            grid-area: s3;
+            background-color: #fff;
+        }
+        
+        .s4 {
+            grid-column: 1/10;
+            grid-row: 9/14;
+            border-bottom: 1px solid #665454;
+            z-index: 0;
+            background-color: #fff;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-around;
+        }
+        
+        .s4 p.text__s4,
+        .s4 div.plus,
+        .s6 p.text__s4,
+        .s6 div.plus {
+            margin-left: 5.5%;
+            margin-top: 6%;
+            margin-bottom: 6%;
+        }
+        
+        .s5 {
+            grid-column: 10/19;
+            grid-row: 9/14;
+            border-bottom: 1px solid #665454;
+            z-index: 0;
+            background-color: #fff;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+        
+        .s6 {
+            grid-column: 19/24;
+            grid-row: 9/14;
+            border-bottom: 1px solid #665454;
+            z-index: 0;
+            background-color: #000;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-around;
+            color: #f3c8c8;
+        }
+        
+        .h1 {
+            grid-area: h1;
+            position: absolute;
+            display: flex;
+        }
+        
+        h1 {
+            font-size: 12vw;
+            font-kerning: unset;
+            text-align: center;
+            position: absolute;
+            top: -3vw;
+            left: -1vw;
+            font-weight: 600;
+            letter-spacing: 2px;
+            display: flex;
+        }
+        
+        .s1 h3 {
+            letter-spacing: 0.093em;
+            font-weight: 500;
+            font-size: 3vw;
+            line-height: 0.9;
+            margin-left: 5.5%;
+            margin-top: -1%;
+        }
+        
+        .s2 h3 {
+            margin-right: 3%;
+            letter-spacing: 0.093em;
+            font-weight: 488;
+            font-size: 3vw;
+            line-height: 0.9;
+            margin-left: 2.5%;
+            margin-top: 4%;
+        }
+        
+        .s2 h3 span {
+            color: #b0b0b0;
+        }
+        
+        .circle {
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid #b0b0b0;
+        }
+        
+        .arrow {
+            width: 15px;
+            height: 15px;
+            border: 2px solid #000;
+            border-left: 0;
+            border-top: 0;
+            margin: 1rem;
+        }
+        
+        .arrow1 {
+            transform: rotate(-225deg);
+        }
+        
+        .arrow2 {
+            transform: rotate(-45deg);
+        }
+        
+        .text__s4 {
+            display: inline-block;
+        }
+        
+        .s4 .circle,
+        .s6 .circle {
+            border: none;
+            background-color: #f3c8c8;
+            color: #000;
+        }
+        
+        .footer {
+            height: 50px;
+            background-color: red;
+        }
+        
+        .text_long {
+            min-width: 50%;
+            margin-left: 2%;
+            margin-top: 3%;
+        }
+        
+        .piu {
+            height: 15px;
+            position: relative;
+            width: 15px;
+            margin: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+        
+        .lente {
+            position: relative;
+            display: inline-block;
+            width: 0.4em;
+            box-sizing: content-box;
+            height: 0.4em;
+            border: 0.1em solid #000;
+            position: relative;
+            border-radius: 0.35em;
+        }
+        
+        .lent_before {
+            display: inline-block;
+            position: absolute;
+            right: -0.25em;
+            bottom: -0.1em;
+            border-width: 0;
+            background: #000;
+            width: 0.35em;
+            height: 0.08em;
+            transform: rotate(45deg);
+        }
+        
+        #Example_03 {
+            position: absolute;
+            top: 0px;
+            width: 30%;
+            height: auto;
+            z-index: 4;
+            -ms-filter: drop-shadow(2px 0 13px #665454);
+            -webkit-filter: drop-shadow(2px 0 13px #665454);
+            -moz-filter: drop-shadow(2px 0 13px #665454);
+            -o-filter: drop-shadow(2px 0 13px #665454);
+            filter: drop-shadow(2px 0 13px #665454);
+            left: 35%;
+            max-width: 400px;
+            min-width: 200px;
+        }
+        
+        .pomela {
+            z-index: 5;
+        }
+        
+        .animate__animated.animate__pulse {}
+        
+        .animate__animated.animate__fadeInBottomRight {
+            --animate-duration: 3.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="GoldenCanonGridExample01">
+        <img class=" animate__animated animate__pulse " id="Example_03" src="Example_03.png" alt="gusto arancia fruit" srcset="Example_03.png 1x, Example_03@2x.png 2x">
+        <div class="menu">
+
+
+            <p>Menu</p>
+        </div>
+        <div class="cerca">
+            <p>+ Ice cream fruit</p>
+
+            <div class="lente">
+                <div class="lent_before">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="login">
+            <p>
+                Login
+            </p>
+        </div>
+        <div class="s1">
+            <h3>Pomelo<br>+ cereza
+            </h3>
+        </div>
+        <div class="s2">
+            <h3>02<span>/07</span>
+            </h3>
+            <h3>
+                <div class="circle">
+                    <div class="arrow arrow1"></div>
+                </div>
+                <div class="circle">
+                    <div class="arrow arrow2"></div>
+                </div>
+            </h3>
+        </div>
+        <div class="s3"></div>
+        <div class="s4">
+            <p class="text__s4">Cras quis, nulla commodo.</p>
+            <div class="plus">
+                <div class="text__s4">Ver informacion nutricional</div>
+                <div class="circle">
+                    <div class="piu">+</div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="s5">
+            <div class="text_long">
+                <p>Nam dapibus nisl vitae elit fringilla retrum.
+                    <br> Aanean sollicitudin, erat a elementum returm,
+                    <br> neque sem pretium metus, quis mollis nisl
+                    <br> nunc et massa. Vestibulum sed metus in
+                    <br>per cetero luptatum ne, et mei affert erroribus.
+                    <br> Ut sem viverra aliquet eget sit amet tellus cras adipiscing.
+                    <br> Duis ut diam quam nulla porttitor massa id.
+                    <br>Per ea tota omittam mentitum, epicurei maiestatis adolescens ius cu.
+                    <br>Vis id deserunt euripidis interesset, est zril decore eu, sit quem atomorum cu.
+
+                </p>
+            </div>
+            <div class="img_gelato  animate__animated  animate__fadeInBottomRight">
+                <img id="gelato" src="Example_05.png" alt="gelato" srcset="Example_05.png 1x, Example_05@2x.png 2x">
+            </div>
+        </div>
+        <div class="s6">
+            <p class="text__s4">Cras quis, nulla commodo.</p>
+            <div class="plus">
+                <div class="text__s4">Ver informacion nutricional</div>
+                <div class="circle">
+                    <div class="piu">+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vert__line1"></div>
+        <div class="vert__line2"></div>
+        <div class="oriz__line1"></div>
+
+        <div class="h1">
+
+            <h1>
+                <div class="pomela">
+                    POMELA
+                </div>
+                <div class="pomela2">
+                    DO
+                </div>
+            </h1>
+
+
+        </div>
+    </div>
+    <div id="GoldenCanonGridExample01">
+        <img class=" animate__animated animate__pulse " id="Example_03" src="Example_03.png" alt="gusto arancia fruit" srcset="Example_03.png 1x, Example_03@2x.png 2x">
+        <div class="menu">
+
+
+            <p>Menu</p>
+        </div>
+        <div class="cerca">
+            <p>+ Ice cream fruit</p>
+
+            <div class="lente">
+                <div class="lent_before">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="login">
+            <p>
+                Login
+            </p>
+        </div>
+        <div class="s1">
+            <h3>Pomelo<br>+ cereza
+            </h3>
+        </div>
+        <div class="s2">
+            <h3>02<span>/07</span>
+            </h3>
+            <h3>
+                <div class="circle">
+                    <div class="arrow arrow1"></div>
+                </div>
+                <div class="circle">
+                    <div class="arrow arrow2"></div>
+                </div>
+            </h3>
+        </div>
+        <div class="s3"></div>
+        <div class="s4">
+            <p class="text__s4">Cras quis, nulla commodo.</p>
+            <div class="plus">
+                <div class="text__s4">Ver informacion nutricional</div>
+                <div class="circle">
+                    <div class="piu">+</div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="s5">
+            <div class="text_long">
+                <p>Nam dapibus nisl vitae elit fringilla retrum.
+                    <br> Aanean sollicitudin, erat a elementum returm,
+                    <br> neque sem pretium metus, quis mollis nisl
+                    <br> nunc et massa. Vestibulum sed metus in
+                    <br>per cetero luptatum ne, et mei affert erroribus.
+                    <br> Ut sem viverra aliquet eget sit amet tellus cras adipiscing.
+                    <br> Duis ut diam quam nulla porttitor massa id.
+                    <br>Per ea tota omittam mentitum, epicurei maiestatis adolescens ius cu.
+                    <br>Vis id deserunt euripidis interesset, est zril decore eu, sit quem atomorum cu.
+
+                </p>
+            </div>
+            <div class="img_gelato  animate__animated  animate__fadeInBottomRight">
+                <img id="gelato" src="Example_05.png" alt="gelato" srcset="Example_05.png 1x, Example_05@2x.png 2x">
+            </div>
+        </div>
+        <div class="s6">
+            <p class="text__s4">Cras quis, nulla commodo.</p>
+            <div class="plus">
+                <div class="text__s4">Ver informacion nutricional</div>
+                <div class="circle">
+                    <div class="piu">+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vert__line1"></div>
+        <div class="vert__line2"></div>
+        <div class="oriz__line1"></div>
+
+        <div class="h1">
+
+            <h1>
+                <div class="pomela">
+                    POM
+                </div>
+                <div class="pomela2">
+                    DO
+                </div>
+            </h1>
+
+
+        </div>
+        <script type="text/javascript">
+            (function(e, t, o, n, p, r, i) {
+                e.visitorGlobalObjectAlias = n;
+                e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function() {
+                    (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments)
+                };
+                e[e.visitorGlobalObjectAlias].l = (new Date).getTime();
+                r = t.createElement("script");
+                r.src = o;
+                r.async = true;
+                i = t.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(r, i)
+            })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+            vgo('setAccount', '91302564');
+            vgo('setTrackByDefault', true);
+
+            vgo('process');
+        </script>
+        <script type="text/javascript">
+            (function(e, t, o, n, p, r, i) {
+                e.visitorGlobalObjectAlias = n;
+                e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function() {
+                    (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments)
+                };
+                e[e.visitorGlobalObjectAlias].l = (new Date).getTime();
+                r = t.createElement("script");
+                r.src = o;
+                r.async = true;
+                i = t.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(r, i)
+            })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+            vgo('setAccount', '91302564');
+            vgo('setTrackByDefault', true);
+
+            vgo('process');
+        </script>
+
+</body>
+
+</html>
